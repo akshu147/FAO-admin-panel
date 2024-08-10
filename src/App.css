@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+main {
+    display: flex;
+
+}
+main .left {
+    height: 100vh;
+    background: #212631;
+    color: white;
+    transition: 0.4s;
+    border-right: 0.4px solid rgb(85, 83, 83);
+
+
+
+
+
+}
+main .left ul li{
+
+    line-height:40px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    color:#E3E4E5;
+    z-index: -20;
+    margin: 1px;
+}
+main .left ul li:hover {
+    background: rgba(255, 255, 255, 0.042)
+}
+main .left ul li i {
+    opacity: 0.4;
+    font-size: 20px;
+}
+main .left ul li:hover i {
+    opacity: 3;
+}
+main .left header {
+    font-size: 24px;
+    padding: 10px;
+    border-bottom: 0.4px solid rgb(85, 83, 83);
+
+}
+
+main .right {
+    height: 60px;
+    background: #212631;
+    color:white;
+}
+main .right .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 8px 20px;
+}
+main .right .inner .menu {
+    transform: translateY(-8px);
+
+
+}
+main .right .inner .img {
+    width: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+main .right .inner .menu i {
+    font-size:25px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+main .right .inner .menu i:hover {
+    opacity: 3;
+}
+.caption {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 4px 20px;
+    color:#75797F;
+}
+
+
