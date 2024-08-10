@@ -15,7 +15,7 @@ const Head = () => {
 
   })
   const changewidth = ()=> {
-    if(mywidth.firstwidth=== "17%") {
+    if(mywidth.firstwidth=== "18%") {
       setmywidth({
         firstwidth:"0%",
         secondwidth:"100%",
