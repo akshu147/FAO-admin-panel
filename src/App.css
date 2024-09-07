@@ -1,80 +1,117 @@
 * {
     padding: 0;
     margin: 0;
-    list-style: none;
     box-sizing: border-box;
     text-decoration: none;
+    list-style:none;
 }
 main {
     display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background: #212631;
+    
+
+}
+main .left header {
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    left:0;
+    background: #212631;
+    z-index: 10;
+
 
 }
 main .left {
     height: 100vh;
     background: #212631;
     color: white;
-    transition: 0.4s;
+    transition: width 0.3s;
     border-right: 0.4px solid rgb(85, 83, 83);
+    overflow-y: scroll;
+  
+}
+main .left::-webkit-scrollbar {
+    width: 4px;
 
-
-
-
+}
+main .left::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top, orange, lightblue, yellow);
 
 }
 main .left ul li{
 
     line-height:40px;
-    padding: 4px 10px;
+    padding: 0px 10px;
     border-radius: 8px;
     color:#E3E4E5;
     z-index: -20;
     margin: 1px;
 }
-main .left ul li:hover {
-    background: rgba(255, 255, 255, 0.042)
+main .left li:hover {
+    background: rgba(255, 255, 255, 0.125)
 }
-main .left ul li i {
+main .left ul {
+    overflow: hidden;
+}
+main .left li i {
     opacity: 0.4;
     font-size: 20px;
 }
-main .left ul li:hover i {
+main .left li:hover i {
     opacity: 3;
 }
 main .left header {
     font-size: 24px;
-    padding: 10px;
+    padding: 20px 10px;;
     border-bottom: 0.4px solid rgb(85, 83, 83);
-
+    color: #E2E3E4;
 }
 
 main .right {
-    height: 60px;
-    background: #212631;
-    color:white;
+    height: 100vh;
+    overflow-y: scroll;
+    background: #1D222B;
+
+
+
 }
-main .right .inner {
+main .right .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     padding: 8px 20px;
+    color:white;
+    background: #212631;
+    height: 60px;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    border-bottom:0.1px solid rgba(255, 255, 255, 0.364)
+    
+
+
 }
-main .right .inner .menu {
+main .right .navbar .menu {
     transform: translateY(-8px);
 
 
 }
-main .right .inner .img {
+main .right .navbar .img {
     width: 45px;
     overflow: hidden;
     border-radius: 50%;
 }
-main .right .inner .menu i {
+main .right .navbar .menu i {
     font-size:25px;
     cursor: pointer;
     opacity: 0.5;
+   
 }
-main .right .inner .menu i:hover {
+main .right .navbar .menu i:hover {
     opacity: 3;
 }
 .caption {
@@ -83,5 +120,190 @@ main .right .inner .menu i:hover {
     padding: 4px 20px;
     color:#75797F;
 }
+.content {
+    width: 100%
+}
+.deshboard-navigation {
+    background: #212631;
+    border-bottom:0.1px solid rgba(255, 255, 255, 0.364);
+    padding: 10px 10px;
+    color:white
+
+}
+.graph {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 25px;
+    gap: 20px;
+
+}
+.graph > div {
+    height: 150px;
+    border-radius: 13px;
+}
+.graph > div:nth-child(1) {
+    background: #6261CC
+}
+.graph > div:nth-child(2) {
+    background: #3D99F5;
+}
+.graph > div:nth-child(3) {
+    background: #EDAD21;
+}
+.graph > div:nth-child(4) {
+    background: #DB5D5D
+} 
+
+.accordion-button {
+    background: #1D222B;
+    color:white;
+    padding: 10px 10px;
+ 
+}
+.accordion-body {
+    background: #1D222B;
+    color:white;
+    margin: 0 ! important;
+    padding: 0;
+    border:none
+    
+} 
+.commen-div {
+    border:2px solid rgba(166, 166, 166, 0.389);
+    margin: 25px;
+    border-radius: 7px;
+    color:#E3E4E5;
+
+}
+.commen-div header{
+    color:#E3E4E5;
+    padding: 9px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    background:rgba(188, 184, 184, 0.303);
+    margin:0;
+}
+.commen-div input[type="text"] {
+    background: transparent;
+    border:1px solid rgba(255, 255, 255, 0.208);
+  
+}
+.commen-div .commencontent input[type="text"] {
+    width: 100%;
+    border-radius: 7px;
+    padding: 5px 10px;
+    color:#E3E4E5;
+}
+.commen-div .commencontent {
+    padding: 15px;
+}
+.mybtn {
+    padding: 6px 10px;
+    background: #5352AD;
+    border-radius: 7px;
+    color: white;
+    font-size: 18px;
+    border:none;
+    transition: 0.2s;
+
+}
+.mybtn:hover {
+    outline: 1px solid white;
+    outline-offset: 1px;
+
+}
+.commen-div .commencontent table {
+    width: 100%;
+}
+.commen-div .commencontent table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.163);
+}
+.commen-div .commencontent table , td ,th {
+    padding: 10px;
+}
+.commencontent table i {
+    cursor: pointer;
+}
+.links input[type="url"] {
+    width: 50%;
+    border:1px solid rgba(255, 255, 255, 0.208);
+    border-radius: 7px;
+    padding: 5px 10px;
+    color:#E3E4E5;
+    background: transparent; 
+}
+.commencontent input[type="password"] {
+    width: 100%;
+    border:1px solid rgba(255, 255, 255, 0.208);
+    border-radius: 7px;
+    padding: 5px 10px;
+    color:#E3E4E5;
+    background: transparent;  
+}
+.commen-div .commencontent input[type="file"] {
+    width: 100%;
+    border:1px solid rgba(255, 255, 255, 0.208);
+    border-radius: 7px;
+    color:#E3E4E5;
+    background: transparent; 
+ 
+
+
+}
+.commen-div .commencontent input[type="file"]::file-selector-button {
+    padding: 5px 10px;
+    background: transparent;
+    border: none;
+    color:#E3E4E5;
+    background-color: rgba(255, 255, 255, 0.233);
+    cursor: pointer;
+}
+.commen-div .commencontent input[type="file"]::file-selector-button:hover {
+    border-radius: 0px 8px 8px 0px;
+    transition: 0.3s;
+    border-right: 1px solid white;
+
+}
+.commen-div .commencontent textarea {
+    width: 100%;
+    border:1px solid rgba(255, 255, 255, 0.208);
+    border-radius: 7px;
+    padding: 5px 10px;
+    color:#E3E4E5;
+    background: transparent; 
+    transition: 0.4s;
+
+}
+.commen-div .commencontent textarea:focus {
+    box-shadow:0px 0px 1px 2px #5352AD;
+    border: none;
+}
+.commencontent select {
+    width: 100%;
+    padding: 6px 10px;
+    background: transparent;
+    border: none;
+    color:#E3E4E5;
+    background-color: rgba(255, 255, 255, 0.233);
+    cursor: pointer;
+    border-radius: 7px;
+    padding-right: 20px;
+    border:1px solid rgba(255, 255, 255, 0.208);
+
+}
+#list {
+    background: #1D222B
+}
+#list:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
 
 

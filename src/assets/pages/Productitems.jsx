@@ -4,7 +4,7 @@ import { IoMdSettings } from "react-icons/io";
 import { RiMenu4Fill } from "react-icons/ri";
 import women from '../images/8-CQnrj2m9.jpg';
 import React, { useState } from 'react';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Accordion from 'react-bootstrap/Accordion';
 import { LuPointer } from "react-icons/lu";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
@@ -14,9 +14,9 @@ import { MdManageHistory } from "react-icons/md";
 import { MdBorderColor } from "react-icons/md";
 import { FaFileContract } from "react-icons/fa";
 import { VscCircleSmall } from "react-icons/vsc";
-import ColorPicker from 'react-pick-color';
-const Color = () => {
-  const [color, setColor] = useState("'#fff'")
+import { AiOutlineDelete } from "react-icons/ai"
+import { FaRegEdit } from "react-icons/fa";
+const Productitems = () => {
 
   const [mywidth, setmywidth] = useState({
     firstwidth: "18%",
@@ -48,7 +48,10 @@ const Color = () => {
       secondwidth: "100%"
     })
 
+
   }
+
+
   return (
     <>
       <main>
@@ -59,6 +62,7 @@ const Color = () => {
             <Link style={{ textDecoration: "none" }} to="/admin-panel/deshboard"><li><i className="px-2"><IoSpeedometerSharp /></i> Dashboard</li></Link>
             <Link style={{ textDecoration: "none" }} to="/admin-panel/Color"><li><i className="px-2"><MdOutlineWaterDrop /></i> Colors</li></Link>
             <Link style={{ textDecoration: "none" }} to="/admin-panel/Profile"><li><i className="px-2"><IoMdSettings /></i> Profile</li></Link>
+
 
           </ul>
           <div className="caption py-3">Ecommerce Components</div>
@@ -83,8 +87,8 @@ const Color = () => {
                     <Accordion.Header><i className="px-2"><AiOutlineMenuUnfold /></i><span>Parent category</span></Accordion.Header>
                     <Accordion.Body>
                       <ul className="p-0">
-                        <li> <i><VscCircleSmall /></i><Link to="/admin-panel/parentcategory/addcategory" className="text-decoration-none text-white"> Add category</Link></li>
-                        <li> <i><VscCircleSmall /></i><Link to="/admin-panel/parentcategory/viewcategory" className="text-decoration-none text-white"> View category</Link></li>
+                        <li> <i><VscCircleSmall /></i><Link to="/admin-panel/parentcategory/Viewcategory" className="text-decoration-none text-white"> Add category</Link></li>
+                        <li> <i><VscCircleSmall /></i><Link to="/admin-panel/parentcategory/addcategory" className="text-decoration-none text-white"> View category</Link></li>
                       </ul>
 
                     </Accordion.Body>
@@ -128,6 +132,7 @@ const Color = () => {
                 </li>
               </Accordion>
 
+
               <li className="border my-1 mx-2"><i className="px-2"><MdBorderColor /></i><span><Link to="/admin-panel/orders" className="text-decoration-none text-white">Orders</Link></span> </li>
               <li className="p-0 my-1 mx-2">
                 <Accordion>
@@ -137,7 +142,6 @@ const Color = () => {
                       <ul className="p-0">
                         <li> <i><VscCircleSmall /></i><Link to="/admin-panel/slider/sliderdetail" className="text-decoration-none text-white">Slider detail</Link></li>
                         <li> <i><VscCircleSmall /></i><Link to="/admin-panel/slider/sliderview" className="text-decoration-none text-white">Slider view</Link></li>
-
                       </ul>
 
                     </Accordion.Body>
@@ -145,10 +149,12 @@ const Color = () => {
                 </Accordion>
 
               </li>
-              <li className="border my-1 mx-2"><i className="px-2"><FaFileContract /></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white border" >Terms & Conditions</Link></span></li>
+              <li className="my-1 mx-2 border"><i className="px-2"><FaFileContract /></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white" >Terms & Conditions</Link></span></li>
             </ul>
 
+
           </divhh>
+
 
         </div>
         <div className="right" style={{ width: mywidth.secondwidth }}>
@@ -163,27 +169,48 @@ const Color = () => {
 
           </div>
 
+
           <div className="deshboard-navigation flex">
-            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <Link to="admin-panel/colors" className="text-decoration-none">Theme</Link> / <span>Color</span>
+            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <Link to="admin-panel/colors" className="text-decoration-none">Theme</Link> / <span>Deshboard</span>
           </div>
           <div className="commen-div">
-            <header>Add color</header>
+            <header>Add size</header>
             <div className="commencontent">
-              <p className="pb-4 m-0">Color name</p>
-              <input type="text" placeholder="Color name" />
-              <p className="py-3">Color picker</p>
-              <ColorPicker className="mb-3" color={color} onChange={color => setColor(color.hex)}/>
-              <button className="mybtn">Add size</button>
+              <table>
+                <tr className="w-full">
+                  <th>DElete</th>
+                  <th>S.NO</th>
+                  <th>Product name</th>
+                  <th>Description</th>
+                  <th>Short Description</th>
+                  <th>Thumbnails</th>
+                  <th>Actions</th>
+                  <th>Status</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td>Man's</td>
+                  <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, vitae!</td>
+                  <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, vitae!</td>
+                  <td><img height="50px" width="50px" src={women} alt=""/></td>
+                  <td><AiOutlineDelete className="text-danger cursor-pointer" />  |  <FaRegEdit className="text-warning cursor-pointer" /></td>
+                  <td>display</td>
+                </tr>
+              </table>
             </div>
-
           </div>
+
+
 
         </div>
 
       </main>
 
+
+
     </>
   )
 }
 
-export default Color
+export default Productitems

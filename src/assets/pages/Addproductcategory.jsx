@@ -4,7 +4,7 @@ import { IoMdSettings } from "react-icons/io";
 import { RiMenu4Fill } from "react-icons/ri";
 import women from '../images/8-CQnrj2m9.jpg';
 import React, { useState } from 'react';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Accordion from 'react-bootstrap/Accordion';
 import { LuPointer } from "react-icons/lu";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
@@ -14,9 +14,7 @@ import { MdManageHistory } from "react-icons/md";
 import { MdBorderColor } from "react-icons/md";
 import { FaFileContract } from "react-icons/fa";
 import { VscCircleSmall } from "react-icons/vsc";
-import ColorPicker from 'react-pick-color';
-const Color = () => {
-  const [color, setColor] = useState("'#fff'")
+const Addproductcategory = () => {
 
   const [mywidth, setmywidth] = useState({
     firstwidth: "18%",
@@ -48,7 +46,10 @@ const Color = () => {
       secondwidth: "100%"
     })
 
+
   }
+
+
   return (
     <>
       <main>
@@ -59,6 +60,7 @@ const Color = () => {
             <Link style={{ textDecoration: "none" }} to="/admin-panel/deshboard"><li><i className="px-2"><IoSpeedometerSharp /></i> Dashboard</li></Link>
             <Link style={{ textDecoration: "none" }} to="/admin-panel/Color"><li><i className="px-2"><MdOutlineWaterDrop /></i> Colors</li></Link>
             <Link style={{ textDecoration: "none" }} to="/admin-panel/Profile"><li><i className="px-2"><IoMdSettings /></i> Profile</li></Link>
+
 
           </ul>
           <div className="caption py-3">Ecommerce Components</div>
@@ -128,6 +130,7 @@ const Color = () => {
                 </li>
               </Accordion>
 
+
               <li className="border my-1 mx-2"><i className="px-2"><MdBorderColor /></i><span><Link to="/admin-panel/orders" className="text-decoration-none text-white">Orders</Link></span> </li>
               <li className="p-0 my-1 mx-2">
                 <Accordion>
@@ -137,7 +140,6 @@ const Color = () => {
                       <ul className="p-0">
                         <li> <i><VscCircleSmall /></i><Link to="/admin-panel/slider/sliderdetail" className="text-decoration-none text-white">Slider detail</Link></li>
                         <li> <i><VscCircleSmall /></i><Link to="/admin-panel/slider/sliderview" className="text-decoration-none text-white">Slider view</Link></li>
-
                       </ul>
 
                     </Accordion.Body>
@@ -145,10 +147,12 @@ const Color = () => {
                 </Accordion>
 
               </li>
-              <li className="border my-1 mx-2"><i className="px-2"><FaFileContract /></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white border" >Terms & Conditions</Link></span></li>
+              <li className="my-1 mx-2"><i className="px-2"><FaFileContract /></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white border" >Terms & Conditions</Link></span></li>
             </ul>
 
+
           </divhh>
+
 
         </div>
         <div className="right" style={{ width: mywidth.secondwidth }}>
@@ -163,27 +167,40 @@ const Color = () => {
 
           </div>
 
+
           <div className="deshboard-navigation flex">
-            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <Link to="admin-panel/colors" className="text-decoration-none">Theme</Link> / <span>Color</span>
+            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link>/ <span>Add cotegory</span>
           </div>
           <div className="commen-div">
-            <header>Add color</header>
-            <div className="commencontent">
-              <p className="pb-4 m-0">Color name</p>
-              <input type="text" placeholder="Color name" />
-              <p className="py-3">Color picker</p>
-              <ColorPicker className="mb-3" color={color} onChange={color => setColor(color.hex)}/>
-              <button className="mybtn">Add size</button>
-            </div>
+            <header>Add product category</header>
+            <form action="">
+              <div className="commencontent">
+                <label className="pb-4 m-0">category name</label>
+                <input type="text" placeholder="category image" />
+                <label className="py-3 m-0">category image</label>
+                <input type="file" placeholder="category image" />
+                <label className="py-3 m-0">Size name</label>
+                <input type="text" placeholder="Size name" />
+                <label className="pt-3 mb-3">Description</label>
+                <textarea placeholder="Enter some text"></textarea>
+                <div className="py-3 m-0 d-flex items-center"><span className="pe-3">Status : </span><input type="radio" name="radio" /><span className="px-2">Display</span><input type="radio" name="radio" /><span className="px-2">Hide</span></div>
 
+                <button className="mybtn d-block">Add Category</button>
+              </div>
+            </form>
           </div>
+
+
 
         </div>
 
       </main>
 
+
+
     </>
   )
 }
 
-export default Color
+export default Addproductcategory
+

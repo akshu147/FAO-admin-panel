@@ -14,7 +14,9 @@ import { MdManageHistory } from "react-icons/md";
 import { MdBorderColor } from "react-icons/md";
 import { FaFileContract } from "react-icons/fa";
 import { VscCircleSmall } from "react-icons/vsc";
-const Dashboard = () => {
+import { AiOutlineDelete } from "react-icons/ai"
+import { FaRegEdit } from "react-icons/fa";
+const Viewcategory = () => {
 
   const [mywidth, setmywidth] = useState({
     firstwidth: "18%",
@@ -46,9 +48,7 @@ const Dashboard = () => {
       secondwidth: "100%"
     })
 
-
   }
-
 
   return (
     <>
@@ -60,7 +60,6 @@ const Dashboard = () => {
             <Link style={{ textDecoration: "none" }} to="/admin-panel/deshboard"><li><i className="px-2"><IoSpeedometerSharp /></i> Dashboard</li></Link>
             <Link style={{ textDecoration: "none" }} to="/admin-panel/Color"><li><i className="px-2"><MdOutlineWaterDrop /></i> Colors</li></Link>
             <Link style={{ textDecoration: "none" }} to="/admin-panel/Profile"><li><i className="px-2"><IoMdSettings /></i> Profile</li></Link>
-
 
           </ul>
           <div className="caption py-3">Ecommerce Components</div>
@@ -130,7 +129,6 @@ const Dashboard = () => {
                 </li>
               </Accordion>
 
-
               <li className="border my-1 mx-2"><i className="px-2"><MdBorderColor/></i><span><Link to="/admin-panel/orders" className="text-decoration-none text-white">Orders</Link></span> </li>
               <li className="p-0 my-1 mx-2">
                 <Accordion>
@@ -140,7 +138,6 @@ const Dashboard = () => {
                       <ul className="p-0">
                         <li> <i><VscCircleSmall/></i><Link to="/admin-panel/slider/sliderdetail" className="text-decoration-none text-white">Slider detail</Link></li>
                         <li> <i><VscCircleSmall/></i><Link to="/admin-panel/slider/sliderview" className="text-decoration-none text-white">Slider view</Link></li>
-                        
                       </ul>
 
                     </Accordion.Body>
@@ -148,12 +145,10 @@ const Dashboard = () => {
                 </Accordion>
 
               </li>
-              <li className="border my-1 mx-2"><i className="px-2"><FaFileContract/></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white border" >Terms & Conditions</Link></span></li>
+              <li className="my-1 mx-2"><i className="px-2"><FaFileContract/></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white border" >Terms & Conditions</Link></span></li>
             </ul>
 
-
           </divhh>
-
 
         </div>
         <div className="right" style={{ width: mywidth.secondwidth }}>
@@ -168,25 +163,59 @@ const Dashboard = () => {
 
           </div>
 
-
           <div className="deshboard-navigation flex">
-            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <Link to="admin-panel/colors" className="text-decoration-none">Theme</Link> / <span>Deshboard</span>
+            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <span>Viewcategory</span>
           </div>
-          <div className="graph">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <div className="commen-div">
+                        <header>Add size</header>
+                        <div className="commencontent">
+                            <table>
+                                <tr className="w-full">
+                                    <th>Delete</th>
+                                    <th>S.NO</th>
+                                    <th>Category name</th>
+                                    <th>Image</th>
+                                    <th>Description</th>
+                                    <th>Action</th>
+                                    <th>Statud</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>Men's</td>
+                                    <td><img height="50px" width="50px" src={women} alt=""/></td>
+                                    <td>asdfsdf</td>
+                                    <td><AiOutlineDelete className="text-danger cursor-pointer"/>  |  <FaRegEdit className="text-warning cursor-pointer"/></td>
+                                    <td>Status</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>Men's</td>
+                                    <td><img height="50px" width="50px" src={women} alt=""/></td>
+                                    <td>descript flanasldf a;lskkf;la</td>
+                                    <td><AiOutlineDelete className="text-danger cursor-pointer"/>  |  <FaRegEdit className="text-warning cursor-pointer"/></td>
+                                    <td>Status</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>Men's</td>
+                                    <td><img height="50px" width="50px" src={women} alt=""/></td>
+                                    <td>descript flanasldf a;lskkf;la</td>
+                                    <td><AiOutlineDelete className="text-danger cursor-pointer"/>  |  <FaRegEdit className="text-warning cursor-pointer"/></td>
+                                    <td>Status</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
 
         </div>
 
       </main>
 
-
-
     </>
   )
 }
 
-export default Dashboard
+export default Viewcategory

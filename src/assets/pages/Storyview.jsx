@@ -14,7 +14,10 @@ import { MdManageHistory } from "react-icons/md";
 import { MdBorderColor } from "react-icons/md";
 import { FaFileContract } from "react-icons/fa";
 import { VscCircleSmall } from "react-icons/vsc";
-const Dashboard = () => {
+import { AiOutlineDelete } from "react-icons/ai"
+import { FaRegEdit } from "react-icons/fa";
+import bannerimage from '../images/c097aded-8dfb-497d-87c0-e0ef5ec5c8761695179114326StormbornMenBrownPrintedPoloCollarPocketsT-shirt1.webp'
+const Storyview = () => {
 
   const [mywidth, setmywidth] = useState({
     firstwidth: "18%",
@@ -140,7 +143,6 @@ const Dashboard = () => {
                       <ul className="p-0">
                         <li> <i><VscCircleSmall/></i><Link to="/admin-panel/slider/sliderdetail" className="text-decoration-none text-white">Slider detail</Link></li>
                         <li> <i><VscCircleSmall/></i><Link to="/admin-panel/slider/sliderview" className="text-decoration-none text-white">Slider view</Link></li>
-                        
                       </ul>
 
                     </Accordion.Body>
@@ -148,7 +150,7 @@ const Dashboard = () => {
                 </Accordion>
 
               </li>
-              <li className="border my-1 mx-2"><i className="px-2"><FaFileContract/></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white border" >Terms & Conditions</Link></span></li>
+              <li className=" my-1 mx-2"><i className="px-2"><FaFileContract/></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white border" >Terms & Conditions</Link></span></li>
             </ul>
 
 
@@ -170,14 +172,40 @@ const Dashboard = () => {
 
 
           <div className="deshboard-navigation flex">
-            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <Link to="admin-panel/colors" className="text-decoration-none">Theme</Link> / <span>Deshboard</span>
+            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <span>View story</span>
           </div>
-          <div className="graph">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+
+          <div className="commen-div">
+                        <header>Add size</header>
+                        <div className="commencontent">
+                            <table>
+                                <tr className="w-full">
+                                    <th><span className="pe-2">Delete</span><input type="checkbox" /></th>
+                                    <th>S.NO</th>
+                                    <th>Story name</th>
+                                    <th>image</th>
+                                    <th>Banner</th>
+
+                                    <th>Description</th>
+                                    <th>Action</th>
+                          
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>Who we are</td>
+                                    <td><img height="50px" width="50px" src={women} alt=""/></td>
+                                    <td><img height="50px" width="70px" src={bannerimage} alt="Banner" /></td>
+                                    <td>Description Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                                    <td><AiOutlineDelete className="text-danger cursor-pointer"/>  |  <FaRegEdit className="text-warning cursor-pointer"/></td>
+                                    <td>display</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+
 
         </div>
 
@@ -189,4 +217,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Storyview

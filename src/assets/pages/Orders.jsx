@@ -14,7 +14,9 @@ import { MdManageHistory } from "react-icons/md";
 import { MdBorderColor } from "react-icons/md";
 import { FaFileContract } from "react-icons/fa";
 import { VscCircleSmall } from "react-icons/vsc";
-const Dashboard = () => {
+
+
+const Orders = () => {
 
   const [mywidth, setmywidth] = useState({
     firstwidth: "18%",
@@ -131,7 +133,7 @@ const Dashboard = () => {
               </Accordion>
 
 
-              <li className="border my-1 mx-2"><i className="px-2"><MdBorderColor/></i><span><Link to="/admin-panel/orders" className="text-decoration-none text-white">Orders</Link></span> </li>
+              <li className="my-1 mx-2 border"><i className="px-2"><MdBorderColor/></i><span><Link to="/admin-panel/orders" className="text-decoration-none text-white">Orders</Link></span> </li>
               <li className="p-0 my-1 mx-2">
                 <Accordion>
                   <Accordion.Item eventKey="0">
@@ -140,7 +142,6 @@ const Dashboard = () => {
                       <ul className="p-0">
                         <li> <i><VscCircleSmall/></i><Link to="/admin-panel/slider/sliderdetail" className="text-decoration-none text-white">Slider detail</Link></li>
                         <li> <i><VscCircleSmall/></i><Link to="/admin-panel/slider/sliderview" className="text-decoration-none text-white">Slider view</Link></li>
-                        
                       </ul>
 
                     </Accordion.Body>
@@ -148,7 +149,7 @@ const Dashboard = () => {
                 </Accordion>
 
               </li>
-              <li className="border my-1 mx-2"><i className="px-2"><FaFileContract/></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white border" >Terms & Conditions</Link></span></li>
+              <li className="my-1 mx-2 border"><i className="px-2"><FaFileContract/></i><span><Link to="/admin-panel/terms-condition" className="text-decoration-none text-white" >Terms & Conditions</Link></span></li>
             </ul>
 
 
@@ -170,14 +171,40 @@ const Dashboard = () => {
 
 
           <div className="deshboard-navigation flex">
-            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <Link to="admin-panel/colors" className="text-decoration-none">Theme</Link> / <span>Deshboard</span>
+            <Link to="/admin-panel/deshboard" className="text-decoration-none"><span>Home</span></Link> / <span>Orders</span>
           </div>
-          <div className="graph">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+          <div className="commen-div">
+            <header>Add size</header>
+            <div className="commencontent">
+              <table>
+                <tr className="w-full">
+                  <th>DElete</th>
+                  <th>S.NO</th>
+                  <th>Order Name</th>
+                  <th>Product Id</th>
+                  <th>Image</th>
+                  <th>Description</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td>Man's</td>
+                  <td>2</td>
+                  <td><img height="50px" width="50px" src={women} alt=""/></td>
+                  <td>a;lsdfjas;ldkfs;lad</td>
+                  <td>1</td>
+                  <td>RS. 1500</td>
+                  <td>Processing</td>
+                </tr>
+              </table>
+            </div>
           </div>
+          
+
+
 
         </div>
 
@@ -189,4 +216,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Orders
